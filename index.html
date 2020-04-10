@@ -7,15 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housing</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap&subset=vietnamese" rel="stylesheet">
-    <!-- slick -->
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/slick-theme.css">
     <!-- light box  -->
     <link rel="stylesheet" href="./css/lightbox.css">
     <!-- font font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <!-- magnific popup -->
     <link rel="stylesheet" href="./css/magnific-popup.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="./css/swiper.css">
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -38,30 +37,41 @@
     <!-- carousel -->
     <section class="carousel">
         <div class="carousel_content">
-            <div class="carousel__items bg1">
-                <div>
-                    <h2>LOREM IPSUM AMET</h2>
-                    <p>Lorem, ipsum dour adipisicing elit. Accusamus, odio?</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="carousel__text">
+                        <h2>LOREM IPSUM AMET</h2>
+                        <p>Lorem, ipsum dour adipisicing elit. Accusamus, odio?</p>
+                    </div>
+                    <img src="./img/b1.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="carousel__text">
+                        <h2>LOREM IPSUM AMET</h2>
+                        <p>Lorem, ipsum dour adipisicing elit. Accusamus, odio?</p>
+                    </div>
+                    <img src="./img/b2.jpg" alt="">
+                  </div><div class="swiper-slide">
+                    <div class="carousel__text">
+                        <h2>LOREM IPSUM AMET</h2>
+                        <p>Lorem, ipsum dour adipisicing elit. Accusamus, odio?</p>
+                    </div>
+                    <img src="./img/b3.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="carousel__text">
+                        <h2>LOREM IPSUM AMET</h2>
+                        <p>Lorem, ipsum dour adipisicing elit. Accusamus, odio?</p>
+                    </div>
+                    <img src="./img/b4.jpg" alt="">
+                  </div>
                 </div>
-            </div>
-            <div class="carousel__items bg2">
-                <div>
-                    <h2>DOLOR SIT HATANT MORBI</h2>
-                    <p>Lorem, ipsum dolor sit ipisicing elit. Accusamus, odio?</p>
-                </div>
-            </div>
-            <div class="carousel__items bg3">
-                <div>
-                    <h2>SAL TAK HAZ</h2>
-                    <p>Lorem, ipsum dolor pisicing elit. Accusamus, odio?</p>
-                </div>
-            </div>
-            <div class="carousel__items bg4">
-                <div>
-                    <h2>LOAS SODF KH</h2>
-                    <p>Lorem, ipsum dolor sit icing elit. Accusamus, odio?</p>
-                </div>
-            </div>
+                <!-- Add Pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
         </div>
     </section>
     <!-- about -->
@@ -369,19 +379,6 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- slick -->
-    <script type="text/javascript" src="./js/slick.js"></script>
-    <script>
-        $('.carousel_content').slick({
-            dots: true,
-            infinite: true,
-            speed: 100,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            autoplay:true
-        });
-    </script>
     <!-- countup -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="./js/jquery.countup.min.js"></script>
@@ -422,6 +419,25 @@ $('.simple-ajax-popup').magnificPopup({
     <!-- back to top -->
     <script src="./js/main.js"></script>
     <script src="./js/util.js"></script>
+    <!-- swiper -->
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay:true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable:true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-pagination',
+            }
+        });
+    </script>
 </body>
 
 </html>
